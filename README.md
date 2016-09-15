@@ -8,4 +8,4 @@ Current training data:
 
 - What plugins are installed?
 - What plugins are available?
-- Install plugin <plugin name>.
+- Install plugin &lt;plugin name&gt;.
