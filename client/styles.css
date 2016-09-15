@@ -1,0 +1,14 @@
+.mysam-plug-mgr {
+  font-size: 3em;
+  text-align: left;
+}
+
+.mysam-plug-mgr ul li {
+  font-size: .5em;
+}
+
+.mysam-plug-mgr .plugin-version {
+  margin-left: 0.5em;
+  opacity: 0.5;
+}
+

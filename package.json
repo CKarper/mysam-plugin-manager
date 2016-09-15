@@ -1,0 +1,39 @@
+{
+  "name": "mysam-plugin-manager",
+  "version": "1.0.0",
+  "description": "Let SAM help you with managing plug-ins",
+  "main": "server/",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "rm -rf dist/ && mkdir dist && npm run babel && cp client/styles.css dist",
+    "babel": "browserify client/plugins.js -t babelify --outfile dist/plugins.js --standalone MySam.Plugins",
+    "prepublish": "npm run compile",
+    "release:patch": "npm version patch && npm publish",
+    "release:minor": "npm version minor && npm publish",
+    "release:major": "npm version major && npm publish"
+  },
+  "author": "Christopher Karper",
+  "license": "MIT",
+  "keywords": [
+    "plugins",
+    "mysam-plugin"
+  ],
+  "mysam": {
+    "client": "dist/plugins",
+    "styles": "dist/styles.css"
+  },
+  "devDependencies": {
+    "babelify": "^6.3.0",
+    "browserify": "^11.2.0"
+  },
+  "dependencies": {
+    "feathers-hooks": "^1.5.7",
+    "node-fetch": "^1.6.0",
+    "react": "^15.0.2",
+    "react-dom": "^15.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:CKarper/mysam-plugin-manager.git"
+  }
+}
